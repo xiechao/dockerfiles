@@ -5,6 +5,10 @@ RUN mkdir -p /work \
     && yum -y install https://centos7.iuscommunity.org/ius-release.rpm \
     && yum install python36  python36u-pip python-devel python36-devel gcc gcc-c++ -y \
     && yum clean all
+ENV LANG='zh_CN.UTF-8' \
+    LC_ALL='en_US.UTF-8' \
+    NLS_LANG='SIMPLIFIED CHINESE_CHINA.UTF8' \
+    PYTHONIOENCODING='utf-8'
 ADD ./start.sh /work
 WORKDIR /work
 EXPOSE 80
