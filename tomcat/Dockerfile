@@ -12,3 +12,4 @@ ADD ./start.sh /
 CMD [ "sh","start.sh" ]
 
 # -v $(pwd)/logs:/work/tomcat/apache-tomcat-9.0.19/logs
+# -v $(pwd)/conf:/work/tomcat/apache-tomcat-9.0.19/conf
